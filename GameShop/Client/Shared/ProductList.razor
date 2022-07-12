@@ -1,0 +1,53 @@
+﻿<h3>Products List</h3>
+
+<ul class="list-unstyled">
+    @foreach (var product in Products)
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a href="#">
+                    <img class="media-img" src="@product.ImageUrl" alt="@product.Title">
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="#">
+                    <h4 class="mb-0">@product.Title</h4>
+                </a>
+                <p>@product.Description</p>
+                <h5 class="price">
+                    $@product.Price
+                </h5>
+            </div>
+        </li>
+    }
+</ul>
+
+@code {
+    private static List<Product> Products = new List<Product>
+    {
+        new Product
+        {
+            Id = 1,
+            Title = "World of Warcraft: Dragonflight",
+            Description = "Online MMORPG Game",
+            ImageUrl = "https://cdn.gracza.pl/galeria/gry13/grupy/731999812.jpg",
+            Price = 69.99m
+        },
+         new Product
+        {
+            Id = 2,
+            Title = "LEGO Star Wars Skywalker Saga",
+            Description = "Action Game",
+            ImageUrl = "https://cdn1.epicgames.com/offer/9c59efaabb6a48f19b3485d5d9416032/EGS_LEGOStarWarsTheSkywalkerSaga_TTGames_S2_1200x1600-fba27b1ae598e355c3ad42d04d9025ba",
+            Price = 50m
+        },
+         new Product
+        {
+            Id = 3,
+            Title = "Call of Duty World War",
+            Description = "FPS Game",
+            ImageUrl = "https://a.allegroimg.com/original/110c7b/abecb2f74fed807f63311e4d4279/Call-of-Duty-World-at-War-STEAM",
+            Price = 90m
+        },
+    };
+}
