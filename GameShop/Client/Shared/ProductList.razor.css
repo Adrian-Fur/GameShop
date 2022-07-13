@@ -1,6 +1,6 @@
 ﻿.media-img {
-    max-height: 200px;
-    max-width: 200px;
+    height: 250px;
+    width: 200px;
     border-radius: 6px;
     margin-bottom: 10px;
     transition: transform .2s;
@@ -21,6 +21,7 @@
 
 .media-img-wrapper {
     width: 200px;
+    margin-right: 20px;
     text-align: center;
 }
 
