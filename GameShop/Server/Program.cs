@@ -2,6 +2,7 @@ global using GameShop.Shared;
 global using Microsoft.EntityFrameworkCore;
 global using GameShop.Server.Data;
 global using GameShop.Server.Services.ProductService;
+global using GameShop.Server.Services.CategoryService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 

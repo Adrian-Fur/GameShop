@@ -3,6 +3,7 @@ using GameShop.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameShop.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220716171407_Categories")]
+    partial class Categories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -121,33 +123,6 @@ namespace GameShop.Server.Migrations
                             ImageUrl = "https://image.api.playstation.com/vulcan/img/rnd/202008/1900/lTSvbByTYMqy6R22teoybKCg.png",
                             Price = 90m,
                             Title = "Call of Duty World War"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CategoryId = 1,
-                            Description = "MMORPG Star Wars Game",
-                            ImageUrl = "https://static.wikia.nocookie.net/swtor_gamepedia/images/5/54/BoxArt-SWTOR.png/revision/latest?cb=20190214015731",
-                            Price = 30m,
-                            Title = "Star Wars The Old Republic"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CategoryId = 2,
-                            Description = "Action Game",
-                            ImageUrl = "https://static.wikia.nocookie.net/r__/images/6/65/250px-Rayman_Legends_Box_Art.jpg/revision/latest?cb=20190406193827&path-prefix=rayman3%2Fpl",
-                            Price = 90m,
-                            Title = "Rayman Legends"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CategoryId = 3,
-                            Description = "FPS Online Game",
-                            ImageUrl = "https://static.wikia.nocookie.net/cswikia/images/1/1e/Csgo_steam_store_header_latest.jpg/revision/latest?cb=20211006145310",
-                            Price = 10m,
-                            Title = "Counter Strike"
                         });
                 });
 
