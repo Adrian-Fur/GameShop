@@ -41,5 +41,12 @@ namespace GameShop.Server.Controllers
             var result = await _productService.SearchProduct(searchText);
             return Ok(result);
         }
+
+        [HttpGet("searchsuggestions/{searchText}")]
+        public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProductSearchSuggestions(string searchText)
+        {
+            var result = await _productService.SearchProductSuggestion(searchText);
+            return Ok(result);
+        }
     }
 }
