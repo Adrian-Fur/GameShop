@@ -45,7 +45,8 @@
                     Title = "World of Warcraft: Dragonflight",
                     Description = "Online MMORPG Game",
                     ImageUrl = "https://cdn.gracza.pl/galeria/gry13/grupy/731999812.jpg",
-                    CategoryId = 1
+                    CategoryId = 1,
+                    Featured = true
                 },
                 new Product
                 {
@@ -69,7 +70,9 @@
                     Title = "Star Wars The Old Republic",
                     Description = "MMORPG Star Wars Game",
                     ImageUrl = "https://upload.wikimedia.org/wikipedia/en/3/3c/Star_Wars-_The_Old_Republic_cover.jpg",
-                    CategoryId = 1
+                    CategoryId = 1,
+                    Featured = true
+                    
                 },
                 new Product
                 {
