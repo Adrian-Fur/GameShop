@@ -5,7 +5,15 @@
 
 <PageTitle>Game Shop</PageTitle>
 
-<ProductList></ProductList>
+@if(SearchText == null && CategoryUrl == null)
+{
+    <FeaturedProducts></FeaturedProducts>
+}
+else
+{
+    <ProductList></ProductList>
+}
+
 
 @code {
     [Parameter]
