@@ -1,4 +1,4 @@
-﻿namespace GameShop.Shared
+﻿namespace GameShop.Shared.Models
 {
     public class ServiceResponse<T>
     {

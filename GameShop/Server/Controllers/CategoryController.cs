@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GameShop.Shared.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GameShop.Server.Controllers
 {

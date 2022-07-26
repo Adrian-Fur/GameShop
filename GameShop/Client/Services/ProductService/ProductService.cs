@@ -1,4 +1,6 @@
-﻿namespace GameShop.Client.Services.ProductService
+﻿using GameShop.Shared.Models;
+
+namespace GameShop.Client.Services.ProductService
 {
     public class ProductService : IProductService
     {

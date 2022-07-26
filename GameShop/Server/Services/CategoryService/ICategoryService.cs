@@ -1,4 +1,6 @@
-﻿namespace GameShop.Server.Services.CategoryService
+﻿using GameShop.Shared.Models;
+
+namespace GameShop.Server.Services.CategoryService
 {
     public interface ICategoryService
     {

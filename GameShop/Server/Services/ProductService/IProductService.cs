@@ -1,4 +1,6 @@
-﻿namespace GameShop.Server.Services.ProductService
+﻿using GameShop.Shared.Models;
+
+namespace GameShop.Server.Services.ProductService
 {
     public interface IProductService
     {

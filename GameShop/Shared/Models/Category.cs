@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameShop.Shared
+namespace GameShop.Shared.Models
 {
     public class Category
     {

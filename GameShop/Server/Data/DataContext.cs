@@ -1,4 +1,6 @@
-﻿namespace GameShop.Server.Data
+﻿using GameShop.Shared.Models;
+
+namespace GameShop.Server.Data
 {
     public class DataContext : DbContext
     {

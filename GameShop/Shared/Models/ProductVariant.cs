@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
-namespace GameShop.Shared
+namespace GameShop.Shared.Models
 {
     public class ProductVariant
     {
@@ -11,7 +11,7 @@ namespace GameShop.Shared
         public ProductType ProductType { get; set; }
         public int ProductTypeId { get; set; }
 
-        [Column(TypeName="decimal(18,2)")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
