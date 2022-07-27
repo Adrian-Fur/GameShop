@@ -1,4 +1,5 @@
 global using GameShop.Shared.Models;
+global using GameShop.Shared.Dtos;
 global using Microsoft.EntityFrameworkCore;
 global using GameShop.Server.Data;
 global using GameShop.Server.Services.ProductService;

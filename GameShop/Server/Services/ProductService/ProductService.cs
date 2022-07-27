@@ -72,11 +72,27 @@ namespace GameShop.Server.Services.ProductService
             return response;
         }
 
-        public async Task<ServiceResponse<List<Product>>> SearchProduct(string searchText)
+        public async Task<ServiceResponse<ProductSearchResultDto>> SearchProduct(string searchText, int page)
         {
-            var response = new ServiceResponse<List<Product>>
+            var pageResults = 2f;
+            var pageCount = Math.Ceiling((await FindProductBySearchText(searchText)).Count / pageResults);
+            var products = await _context.Products
+                            .Where(p => p.Title.ToLower().Contains(searchText.ToLower())
+                            ||
+                            p.Description.ToLower().Contains(searchText.ToLower()))
+                            .Include(p => p.Variants)
+                            .Skip((page - 1) * (int)pageResults)
+                            .Take((int)pageResults)
+                            .ToListAsync();
+
+            var response = new ServiceResponse<ProductSearchResultDto>
             {
-                Data = await FindProductBySearchText(searchText)
+                Data = new ProductSearchResultDto
+                {
+                    Products = products,
+                    CurrentPage = page,
+                    Pages = (int)pageCount
+                }
             };
 
             return response;
