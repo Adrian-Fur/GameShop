@@ -1,4 +1,5 @@
 ﻿using GameShop.Shared.Models;
+using GameShop.Shared.Dtos;
 
 namespace GameShop.Client.Services.ProductService
 {
@@ -52,6 +53,7 @@ namespace GameShop.Client.Services.ProductService
 
         public async Task SearchProducts(string searchText, int page)
         {
+            LastSearchText = searchText;
             var result = await _http.GetFromJsonAsync<ServiceResponse<ProductSearchResultDto>>($"api/product/search/{searchText}/{page}");
 
             if (result != null && result.Data != null)
