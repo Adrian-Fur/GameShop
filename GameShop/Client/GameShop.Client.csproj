@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Shared\CartCounter.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Pages\ProductDetails.razor.css" />
   </ItemGroup>
 
@@ -22,6 +26,18 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\GameShop.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Shared\CartCounter.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Shared\CartCounter.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Shared\CartCounter.razor" />
   </ItemGroup>
 
 </Project>

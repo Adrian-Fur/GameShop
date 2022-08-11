@@ -3,6 +3,7 @@ global using GameShop.Shared.Dtos;
 global using System.Net.Http.Json;
 global using GameShop.Client.Services.ProductService;
 global using GameShop.Client.Services.CategoryService;
+global using GameShop.Client.Shared;
 using GameShop.Client;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
